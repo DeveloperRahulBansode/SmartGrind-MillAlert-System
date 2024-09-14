@@ -1,0 +1,15 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+    <h2>Add/Edit Order</h2>
+    <form th:action="@{/orders}" th:object="${order}" method="post">
+        <input type="hidden" th:field="*{id}">
+        <label>Client Name</label>
+        <input type="text" th:field="*{clientName}">
+        <label>Contact Number</label>
+        <input type="text" th:field="*{contactNumber}">
+        <label>Status</label>
+        <input type="text" th:field="*{orderStatus}">
+        <button type="submit">Save</button>
+    </form>
+</body>
+</html>
